@@ -24,6 +24,15 @@
     mode: '0644'
   notify: restart graylog-server
 
+- name: Graylog SNMP plugin should be installed
+  copy:
+    src: graylog-plugin-snmp-0.3.0.jar
+    dest: /usr/share/graylog-server/plugin/graylog-plugin-snmp-0.3.0.jar
+    owner: root
+    group: root 
+    mode: 0644
+
+
 - name: Graylog server should start after reboot
   file:
     path: '/etc/init/graylog-server.override'
