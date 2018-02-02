@@ -24,10 +24,11 @@
     mode: '0644'
   notify: restart graylog-server
 
-- name: Graylog SNMP plugin should be installed
+#https://github.com/cvtienhoven/graylog-plugin-aggregates
+- name: Graylog Aggregates plugin should be installed
   copy:
-    src: graylog-plugin-snmp-0.3.0.jar
-    dest: /usr/share/graylog-server/plugin/graylog-plugin-snmp-0.3.0.jar
+    src: graylog-plugin-aggregates-2.2.2.jar
+    dest: /usr/share/graylog-server/plugin/graylog-plugin-aggregates-2.2.2.jar
     owner: root
     group: root 
     mode: 0644
